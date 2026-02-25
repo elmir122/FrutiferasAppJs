@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Fruteiras Cadastradas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-4">
+    <h1 class="text-center mb-4">Fruteiras Cadastradas</h1>
+
+    <div class="text-end mb-3">
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalCadastro">+</button>
+    </div>
+
+    <div id="listaFruteiras" class="row g-3"></div>
+  </div>
+
+  <div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Cadastrar Fruteira</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formFruteira">
+            <div class="mb-3">
+              <label class="form-label">Nome popular</label>
+              <input type="text" id="nomePopular" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Nome científico</label>
+              <input type="text" id="nomeCientifico" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Produção média (kg)</label>
+              <input type="number" id="producao" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Data do plantio</label>
+              <input type="date" id="dataPlantio" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/fruteira.js"></script>
+</body>
+</html>
